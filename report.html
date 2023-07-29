@@ -32,7 +32,7 @@
         })
         const profile = await profileRes.json()
         const aesName = CryptoJS.AES.encrypt(profile.displayName, 'big_thing').toString()
-        const googleHtmlUrl = 'https://script.google.com/macros/s/AKfycbz1dZI0PIkOVDv5gYRLmb-D4zE7S9WnYSK_6DXCeTMVZsZwuhXWA1cHjmbfcBvy5M7A/exec'
+        const googleHtmlUrl = 'https://script.google.com/macros/s/AKfycbwJzPUfLajxs3cPI27j4uSME-u4hsiUMhG11ksq32G-DKsgydHHGGAnLE-KDd9pexWC/exec'
         location.href = `${googleHtmlUrl}?name=${aesName}`
     }
 
