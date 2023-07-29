@@ -31,9 +31,10 @@
             }
         })
         const profile = await profileRes.json()
-        const aesName = CryptoJS.AES.encrypt(profile.displayName, 'big_thing').toString()
-        const googleHtmlUrl = 'https://script.google.com/macros/s/AKfycbxxY5UPTTy1VHN8Bg09pF6N5CWtIkDkpEDsDUGfL7HooQMKO63l6ZhKyg8F6yBSNRc/exec'
-        location.href = `${googleHtmlUrl}?name=${aesName}`
+        console.log(profile)
+        // const aesName = CryptoJS.AES.encrypt(profile.displayName, 'big_thing').toString()
+        // const googleHtmlUrl = 'https://script.google.com/macros/s/AKfycbxxY5UPTTy1VHN8Bg09pF6N5CWtIkDkpEDsDUGfL7HooQMKO63l6ZhKyg8F6yBSNRc/exec'
+        // location.href = `${googleHtmlUrl}?name=${aesName}`
     }
 
 </script>
