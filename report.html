@@ -25,7 +25,14 @@
             body: `grant_type=authorization_code&code=${code}&redirect_uri=https://dice-big-thing.onrender.com/report.html&client_id=2000261109&client_secret=ad426b71d441eee8b997bbc6439d7695`
         })
         const data = await res.json()
-        console.log(data)
+
+        const profileRes = await fetch('https://api.line.me/v2/profile', {
+            headers: {
+                authorization: `Bearer ${data.access_token}`
+            }
+        })
+        const profile = profileRes.json()
+        console.log(profile)
     }
 
 </script>
