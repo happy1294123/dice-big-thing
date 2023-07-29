@@ -31,10 +31,9 @@
             }
         })
         const profile = await profileRes.json()
-        console.log(profile)
-        // const aesName = CryptoJS.AES.encrypt(profile.displayName, 'big_thing').toString()
-        // const googleHtmlUrl = 'https://script.google.com/macros/s/AKfycbxxY5UPTTy1VHN8Bg09pF6N5CWtIkDkpEDsDUGfL7HooQMKO63l6ZhKyg8F6yBSNRc/exec'
-        // location.href = `${googleHtmlUrl}?name=${aesName}`
+        const aesName = await CryptoJS.AES.encrypt(profile.displayName, 'big_thing').toString()
+        const googleHtmlUrl = await 'https://script.google.com/macros/s/AKfycbw6g4jDDWrbGHa_Yf8xKvnCiZAcBglRuqTdEJiJ0PICC6lH_3LhMR1V8IJs2XPe3Mu5/exec'
+        location.href = `${googleHtmlUrl}?name=${aesName}`
     }
 
 </script>
