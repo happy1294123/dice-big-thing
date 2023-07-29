@@ -22,7 +22,7 @@
         const formData = new FormData();
         formData.append('grant_type', 'authorization_code')
         formData.append('code', code)
-        formData.append('redirect_uri', 'https://dice-big-thing.onrender.com/more.html')
+        formData.append('redirect_uri', 'https://dice-big-thing.onrender.com/report.html')
         formData.append('client_id', '2000261109')
         formData.append('client_secret', 'ad426b71d441eee8b997bbc6439d7695')
 
@@ -34,7 +34,6 @@
         const data = await res.json()
         console.log(data)
     }
-
 
 </script>
 
